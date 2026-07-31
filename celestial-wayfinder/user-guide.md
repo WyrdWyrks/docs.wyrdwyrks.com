@@ -8,7 +8,9 @@ nav_order: 1
 # User Guide
 
 This guide covers everything from your first boot to power-user territory.
+
 # Overview
+
 Here is an overview of the parts of the Wayfinder you will be interacting with:
 
 ![Hardware overview, numbered](/assets/images/celestial-wayfinder/hardware-overview.png)
@@ -23,7 +25,7 @@ Here is an overview of the parts of the Wayfinder you will be interacting with:
 
 # Home Window
 
-The Home Window is the main point of interaction with the LoRa network. At a glance, you can see your battery life, the current state of silent mode, the current time, and the number of unacknowledged messages. From here you can also begin to broadcast a message, access the quick actions menu, access the main menu, lock the device, view your last ping, and scroll through received messages.
+The Home Window is the main point of interaction with the LoRa network. At a glance, you can see your battery life, the current state of silent mode, the current time, and the number of unacknowledged messages. From here you can also begin to broadcast a message, access the quick actions menu, access the main menu, lock the device, view your last ping, and scroll through received messages. See [Main Menu](#main-menu) below for what's there.
 
 ![Home Window](/assets/images/celestial-wayfinder/home-window.png)
 
@@ -71,14 +73,15 @@ Scrolling up displays your last broadcast. You can see the message attached to i
 ![Received message](/assets/images/celestial-wayfinder/received-message.png)
 
 Scrolling down from the Home Window will display messages received from other users. The compass ring will point towards the coordinates attached to the message and you can see your distance away at the top. From here, you can save the message or the location attached to the ping. Pressing "Mark Read" will clear the message from your Home Window.
-## Main Menu
+
+# Main Menu
 
 Accessed from the Home Window, the Main Menu holds configuration, diagnostics,
 and device-level actions.
 
 | Item               | Purpose                                                                                                       |
 | ------------------ | ------------------------------------------------------------------------------------------------------------- |
-| Settings           | General device settings. See #settings-reference for more info                                                |
+| Settings           | General device settings. See [Settings Reference](#settings-reference) for more info                          |
 | Configure via WiFi | Spins up a WiFi AP so the companion app can connect and change settings.                                      |
 | Configure via BT   | Same as above, over BLE pairing instead of WiFi.                                                              |
 | Status Messages    | Create, edit, and delete the saved status messages offered when broadcasting.                                 |
