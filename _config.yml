@@ -37,6 +37,11 @@ aux_links_new_tab: true
 heading_anchors: true
 color_scheme: dark
 
+# In-page tables of contents (kramdown's native {:toc} marker) only go this
+# deep, so they stay a section map instead of a full heading outline.
+kramdown:
+  toc_levels: 1..2
+
 back_to_top: true
 back_to_top_text: "Back to top"
 

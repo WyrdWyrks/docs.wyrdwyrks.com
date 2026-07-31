@@ -6,8 +6,15 @@ nav_order: 1
 ---
 
 # User Guide
+{: .no_toc }
 
 This guide covers everything from your first boot to power-user territory.
+
+## Table of contents
+{: .no_toc .text-delta }
+
+1. TOC
+{:toc}
 
 # Overview
 
