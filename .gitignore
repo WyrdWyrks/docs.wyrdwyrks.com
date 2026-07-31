@@ -5,7 +5,6 @@ _site/
 vendor/
 Gemfile.lock
 
-# Obsidian: ignore the churny per-machine pane layout, but keep the rest of
-# .obsidian/ committed so vault settings travel with the repo.
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
+# Obsidian: vault config is per-editor preference, not project content —
+# keep it out of a public repo's history.
+.obsidian/
