@@ -94,7 +94,7 @@ and device-level actions.
 | Status Messages    | Create, edit, and delete the saved status messages offered when broadcasting.                                 |
 | Saved Locations    | Create, edit, and delete saved locations offered when broadcasting.                                           |
 | Debug Compass      | Live compass readings for troubleshooting. You can also calibrate the compass here                            |
-| Debug Geolocation  | Read, enable, and disable your geolocation sources including static location, GPS, and WiFi-based geolocation |
+| Debug Geolocation  | Read, enable, and disable your geolocation sources. See [Geolocation Sources](#geolocation-sources) for what each one does |
 | Diagnostic Info    | Memory diagnosics                                                                                             |
 | Breakout           | Breakout game                                                                                                 |
 | Reboot             | Restarts the device.                                                                                          |
@@ -189,6 +189,59 @@ If a message doesn't decrypt — wrong key, or no key against an encrypted
 message, or a key against a plaintext one — it simply never appears on your
 Home Window. There's no error, no notification that a private message passed
 through; it's indistinguishable from mesh noise.
+
+## Geolocation Sources
+{: #geolocation-sources }
+
+Three independent sources can supply your badge's location. They're queried
+in priority order — **GPS, then WiFi, then Static** — and the first one to
+report a fix wins. Each can be enabled or disabled independently from the
+Main Menu's [Debug Geolocation](#main-menu) screen.
+
+### GPS
+
+The primary source, and the only one that also sets the clock. It's a
+satellite fix from the onboard GPS module. Like any GPS, it needs a clear-ish
+view of the sky and can take a while to get a first fix — it reports "No Fix"
+on the Debug Geolocation screen until then.
+
+### WiFi
+
+Falls back in when GPS can't get a fix — indoors, or in a crowded convention
+hall, the kind of "urban canyon" GPS struggles with. 
+
+It scans nearby WiFi access points and looks each one up in an on-device
+database of surveyed AP coordinates. Matched APs are weighted by signal
+strength — a stronger RSSI implies the AP is closer — and averaged into a
+position estimate. Accuracy is coarse, ~30 meters, but it
+works where GPS can't.
+
+This only finds access points already in the badge's database — see
+[Configuration App → Geolocation](#geolocation) for uploading one. WyrdWyrks
+ships a database pre-populated for the convention venue.
+
+### Static
+
+A fixed coordinate with no sensor involved — the last-resort fallback when
+neither GPS nor WiFi produce a fix. Set it from the **Static Lat** / **Static
+Lon** settings under [Settings Reference → Navigation](#settings-reference);
+useful as a known-good location for testing, or as a deliberate fallback if
+you'd rather the badge report a fixed point than nothing at all when the
+other sources are out of range.
+
+### How they interact
+
+Every enabled source is polled automatically in the background every 15
+seconds, and a fix is considered good for 60 seconds before it's treated as
+stale. `GetCurrentLocation()` — everything on the badge that needs "where am
+I," including distance/bearing to a ping — returns the freshest fix from the
+highest-priority enabled source, GPS first.
+
+Disabling a source from the Debug Geolocation screen (Button 4) is useful for
+testing: disabling GPS, for instance, forces the badge onto WiFi or Static
+even under a clear sky, showing you what a user without a GPS fix sees.
+Scroll between sources with the encoder; Button 1 forces an immediate refresh
+of whichever source is on screen.
 
 ## Settings Reference
 {: #settings-reference }
