@@ -102,26 +102,32 @@ and device-level actions.
 
 # Configuration App
 
-The Wayfinder includes a Progressive Web App (PWA) to make initial configuration easier. This app can be accessed at https://Wayfinder.WyrdWyrks.com/ on any chrome-based browser and downloaded to most devices for offline use. Due to the built-in RPC protocol, the PWA can connect to the Wayfinder over USB-C Serial (recommended), BLE, and WiFi (not recommended).
+The Wayfinder includes a Progressive Web App (PWA) to make initial configuration easier. This app can be accessed at [Wayfinder.WyrdWyrks.com](https://Wayfinder.WyrdWyrks.com/) on any chrome-based browser and downloaded to most devices for offline use. Due to the built-in RPC protocol, the PWA can connect to the Wayfinder over USB-C Serial (recommended), BLE, and WiFi (not recommended).
 
 ## Messages
 
 Create, update, and delete saved messages that can be selected with any ping.
-## Locations 
+
+## Locations
 
 Create, update, and delete saved locations that can be selected with any ping. A map displays all of your saved coordinates and assists with selection of new coordinates.
+
 ## Geolocation
 
 The Geolocation tab allows you to upload coordinates of WiFi access points to assist in WiFi-based geolocation when GPS fails. A pre-populated JSON file of AP information for the LVCC is included and can be downloaded for editing. The PWA caches recently uploaded databases to easily switch between.
+
 ## Settings
 
 Edit on-device settings.
+
 ## Firmware
 
 View currently installed firmware and a list of releases available for install.
+
 ## Screen
 
 Serial connection only. Emulates the OLED screen and allows for input emulated from the PWA.
+
 # Appendix
 
 ## LoRa: Channels & Passwords
@@ -295,6 +301,7 @@ actually do.
 | ---------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------- |
 | WiFi Mode        | Off        | Off, AP Mode, or Station Mode. Controls how [Configure via WiFi](#main-menu) connects.                                      |
 | WiFi AP Password | `esp-XXXX` | Up to 21 characters. Password for the hotspot the badge creates in AP Mode. Last 4 characters are randomized on first boot. |
+
 ### Navigation
 
 | Setting    | Default  | Notes                                           |
