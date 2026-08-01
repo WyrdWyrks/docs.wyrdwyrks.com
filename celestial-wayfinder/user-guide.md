@@ -102,6 +102,8 @@ and device-level actions.
 
 # Configuration App
 
+![Configuration App](/assets/images/celestial-wayfinder/PWA.png)
+
 The Wayfinder includes a Progressive Web App (PWA) to make initial configuration easier. This app can be accessed at https://Wayfinder.WyrdWyrks.com/ on any chrome-based browser and downloaded to most devices for offline use. Due to the built-in RPC protocol, the PWA can connect to the Wayfinder over USB-C Serial (recommended), BLE, and WiFi (not recommended).
 
 ## Messages
