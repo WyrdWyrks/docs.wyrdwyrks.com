@@ -310,3 +310,10 @@ actually do.
 | ---------- | -------- | ----------------------------------------------- |
 | Static Lat | 33.7490  | Latitude used for emulating a static location.  |
 | Static Lon | -84.3880 | Longitude used for emulating a static location. |
+# Further Questions
+
+Any other questions not covered here? Reach out to our team on the BadgeMakers discord:
+
+- d3g3n - Firmware
+- l4rry - Hardware
+- ammar2 - PWA
