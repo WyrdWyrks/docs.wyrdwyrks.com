@@ -40,7 +40,7 @@ The Home Window is the main point of interaction with the LoRa network. At a gla
 
 Pressing button 2 will prompt you to select a location
 
-![](assets/images/celestial-wayfinder/broadcast-select-location.png)
+![Select a location](assets/images/celestial-wayfinder/broadcast-select-location.png)
 
 The default is your current location. More locations can be saved from pings received, the quick action menu, or downloaded onto the device from the configuration app.
 
