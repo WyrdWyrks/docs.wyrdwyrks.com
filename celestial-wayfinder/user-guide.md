@@ -73,6 +73,7 @@ Locking the device clears the OLED, enables some power saving measures, and awai
 ## My Last Broadcast
 
 ![My Last Broadcast](/assets/images/celestial-wayfinder/my-last-broadcast.png)
+
 Scrolling up displays your last broadcast. You can see the message attached to it, how far away it was, how long ago it was sent, and how many times the message echoed back to you from other users. Selecting resend will enter a state where the message is resent periodically with updated time and location.
 
 ## Received Messages
