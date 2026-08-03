@@ -40,9 +40,9 @@ The Home Window is the main point of interaction with the LoRa network. At a gla
 
 Pressing button 2 will prompt you to select a location
 
-![Select a location](/assets/images/celestial-wayfinder/broadcast-select-location.png)
+![](assets/images/celestial-wayfinder/broadcast-select-location.png)
 
-The default location is "Ping", which is your current location. More locations can be saved from pings received, the quick action menu, or downloaded onto the device from the configuration app.
+The default is your current location. More locations can be saved from pings received, the quick action menu, or downloaded onto the device from the configuration app.
 
 ![Select a message](/assets/images/celestial-wayfinder/broadcast-select-message.png)
 
@@ -183,8 +183,7 @@ Under the hood, your key string is stretched into an AES-128 encryption key
 (PBKDF2-HMAC-SHA256, 10,000 iterations), and every message is encrypted with
 AES-128-CBC using a fresh random IV. Two badges with the same key string
 always derive the same encryption key, which is what lets them read each
-other — and why the key is case-sensitive and must match exactly.
-
+other.
 ### How they interact
 
 Every badge relays every message it hears on its channel toward the edge of
@@ -210,8 +209,7 @@ Main Menu's [Debug Geolocation](#main-menu) screen.
 
 The primary source, and the only one that also sets the clock. It's a
 satellite fix from the onboard GPS module. Like any GPS, it needs a clear-ish
-view of the sky and can take a while to get a first fix — it reports "No Fix"
-on the Debug Geolocation screen until then.
+view of the sky and can take a while to get a first fix.
 
 ### WiFi
 
@@ -235,7 +233,7 @@ neither GPS nor WiFi produce a fix. Set it from the **Static Lat** / **Static
 Lon** settings under [Settings Reference → Navigation](#settings-reference);
 useful as a known-good location for testing, or as a deliberate fallback if
 you'd rather the badge report a fixed point than nothing at all when the
-other sources are out of range.
+other sources are out of range. This source is disabled by default.
 
 ### How they interact
 
@@ -310,10 +308,3 @@ actually do.
 | ---------- | -------- | ----------------------------------------------- |
 | Static Lat | 33.7490  | Latitude used for emulating a static location.  |
 | Static Lon | -84.3880 | Longitude used for emulating a static location. |
-# Further Questions
-
-Any other questions not covered here? Reach out to our team on the BadgeMakers discord:
-
-- d3g3n - Firmware
-- l4rry - Hardware
-- ammar2 - PWA
